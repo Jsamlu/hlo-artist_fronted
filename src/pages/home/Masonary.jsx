@@ -3,7 +3,7 @@ import { artWorkList } from "./artWorkList";
 import { Link } from "react-router-dom";
 const Masonary = () => {
   return (
-    <div className=" p-4 sm:columns-2xs columns-[150px]">
+    <div className=" p-4 md:columns-[300px] sm:columns-2xs columns-[100px]">
       {artWorkList.map((artwork) => {
         return (
           <Link to={`/${artwork.name}`}>
