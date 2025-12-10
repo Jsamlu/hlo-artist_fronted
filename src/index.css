@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+.img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.masonary{
+   column-width: 300px;
+   column-gap: 1em ;
+}
