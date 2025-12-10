@@ -26,7 +26,7 @@ const SideBar = () => {
         </nav>
       </aside>
 
-      <aside className="absolute bottom-0 left-0 right-0 py-5 px-3 border-t rounded-t-2xl sm:hidden">
+      <aside className="fixed bottom-0 left-0 right-0 py-5 px-3 border-t rounded-t-2xl sm:hidden">
         <div className="flex items-center justify-around">
             <p>h</p>
             <p>h</p>

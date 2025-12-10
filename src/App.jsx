@@ -6,6 +6,14 @@ import Home from "./pages/home/Home";
 import { AuthContext } from "./context/authContext";
 import axios from "axios";
 import SideBar from "./components/sideBar/SideBar";
+import ArtWorkID from "./pages/home/ArtWorkID";
+import Mansonary from "./pages/home/Masonary";
+
+
+
+
+
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -41,7 +49,9 @@ function App() {
       <SideBar user={user} />
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home user={user}/>} />
+          {/* <Route path="/mansonary" element={<Mansonary user={user} />} /> */}
+          <Route path="/:name" element={<ArtWorkID user={user} />} />
           <Route path="/login" element={<UserLogin />} />
         </Routes>
       </Router>

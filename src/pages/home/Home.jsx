@@ -6,12 +6,16 @@ const Home = () => {
 
   const { user } = useContext(AuthContext);
   if (!user) {
-    return <div className="bg-[#101010]">
+    return <div className="bg-[rgb(16,16,16)]">
       <Masonary/>
-      
+      <h1>Login to see more</h1>
     </div>;
   } else {
-    return <div>Logged in as {user.email}</div>;
+    return<>
+      <div>
+        <Masonary/>
+      </div>
+    </> 
   }
 };
 
