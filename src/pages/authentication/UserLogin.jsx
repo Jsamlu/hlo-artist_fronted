@@ -13,7 +13,7 @@ export default function UserLogin() {
   const loginApi = "http://localhost:5000/api/login";
   const logOut = "http://localhost:5000/api/logout";
   //handle submit
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post(
@@ -74,18 +74,13 @@ export default function UserLogin() {
         />
 
         <button
-          type="submit"
+          onClick={()=>handleLogin()}
           className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition"
         >
           Login
         </button>
 
-        <button
-          onClick={handleLogout}
-          className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition"
-        >
-          Logout
-        </button>
+        
       </form>
     </div>
   );

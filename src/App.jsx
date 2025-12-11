@@ -5,9 +5,8 @@ import UserLogin from "./pages/authentication/UserLogin";
 import Home from "./pages/home/Home";
 import { AuthContext } from "./context/authContext";
 import axios from "axios";
-import SideBar from "./components/sideBar/SideBar";
 import ArtWorkID from "./pages/home/ArtWorkID";
-import Mansonary from "./pages/home/Masonary";
+
 
 
 
@@ -45,8 +44,6 @@ function App() {
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>
-      
-      <SideBar user={user} />
       <Router>
         <Routes>
           <Route path="/" element={<Home user={user}/>} />
@@ -55,7 +52,6 @@ function App() {
           <Route path="/login" element={<UserLogin />} />
         </Routes>
       </Router>
-      
     </AuthContext.Provider>
   );
 }
